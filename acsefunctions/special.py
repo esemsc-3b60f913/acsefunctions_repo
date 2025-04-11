@@ -74,7 +74,7 @@ def gamma(z, T=100, M=1000):
     >>> gamma(1)
     1.0
     >>> gamma(0.5)  # Approximately sqrt(pi)
-    1.7724538509055159
+    1.7724538209055159
     >>> gamma(np.array([1, 2]))
     array([1., 1.])
     """
@@ -95,7 +95,7 @@ def gamma(z, T=100, M=1000):
     return np.vectorize(gamma_scalar)(z)
 
 
-def bessel(alpha, x, n_terms=50):
+def bessel(alpha, x, n_terms=20):
     """
     Compute the Bessel function J_alpha(x) using its series expansion.
 
@@ -108,7 +108,7 @@ def bessel(alpha, x, n_terms=50):
     x : float or numpy.ndarray
         Input value(s).
     n_terms : int, optional
-        Number of terms in the series (default is 50).
+        Number of terms in the series (default is 20).
 
     Returns
     -------

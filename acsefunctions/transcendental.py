@@ -74,7 +74,7 @@ def sinh(x, n_terms=50):
     return np.vectorize(sinh_scalar)(x)
 
 
-def cosh(x, n_terms=50):
+def cosh(x, n_terms=20):
     """
     Compute the hyperbolic cosine cosh(x) using Taylor series.
 
