@@ -1,0 +1,14 @@
+README.md
+setup.py
+acsefunctions/__init__.py
+acsefunctions/special.py
+acsefunctions/transcendental.py
+acsefunctions/utils.py
+acsefunctions.egg-info/PKG-INFO
+acsefunctions.egg-info/SOURCES.txt
+acsefunctions.egg-info/dependency_links.txt
+acsefunctions.egg-info/requires.txt
+acsefunctions.egg-info/top_level.txt
+tests/test_docstrings.py
+tests/test_special.py
+tests/test_transcendental.py
