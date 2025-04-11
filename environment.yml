@@ -1,0 +1,13 @@
+name: acsefunctions_env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - pytest
+  - flake8
+  - sphinx
+  - nbval
+  - pip
+  - pip:
+      - -r file:requirements.txt

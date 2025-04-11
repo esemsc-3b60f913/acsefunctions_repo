@@ -1,0 +1,31 @@
+name: Build Docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'acsefunctions/**'
+      - 'docs/**'
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.10
+      - name: Install dependencies
+        run: |
+          pip install -r docs/requirements.txt
+          pip install -e .
+      - name: Build docs
+        run: sphinx-build -b pdf docs/ docs/_build
+      - name: Commit PDF
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add docs/_build/*.pdf
+          git commit -m "Update documentation PDF" || echo "No changes"
+          git push
