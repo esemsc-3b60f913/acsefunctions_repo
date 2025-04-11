@@ -39,8 +39,9 @@ def exp(x, n_terms=50):
     return np.vectorize(exp_scalar)(x)
 
 
+"""
 def sinh(x, n_terms=50):
-    """
+    
     Compute the hyperbolic sine sinh(x) using Taylor series.
 
     The Taylor series is: sinh(x) = sum_{n=0}^infty x^(2n+1) / (2n+1)!.
@@ -66,12 +67,28 @@ def sinh(x, n_terms=50):
     1.1752011936438014
     >>> sinh(np.array([0, 1]))
     array([0.        , 1.17520119])
-    """
+    
 
     def sinh_scalar(x):
         return series_sum(lambda n: x ** (2 * n + 1), lambda n: 2 * n + 1, n_terms)
 
     return np.vectorize(sinh_scalar)(x)
+"""
+
+
+def sinh_scalar(x, n_terms=20):
+    total = x
+    term = x
+    for n in range(1, n_terms):
+        term *= (x**2) / ((2 * n + 1) * (2 * n))
+        total += term
+        if abs(term) < 1e-15:
+            break
+    return total
+
+
+def sinh(x):
+    return np.vectorize(lambda val: sinh_scalar(val, n_terms=20))(x)
 
 
 def cosh(x, n_terms=20):
