@@ -1,7 +1,6 @@
 """Transcendental functions computed via Taylor series."""
 
 import numpy as np
-from .utils import series_sum
 
 
 def exp(x, n_terms=50):
@@ -33,15 +32,21 @@ def exp(x, n_terms=50):
     array([0.36787944, 1.        , 2.71828183])
     """
 
-    def exp_scalar(x):
-        return series_sum(lambda n: x**n, lambda n: 1 if n == 0 else n, n_terms)
+    def exp_scalar(val):
+        total = 1.0  # Term for n=0
+        term = 1.0
+        for n in range(1, n_terms):
+            term *= val / n  # term_n = term_{n-1} * x / n
+            total += term
+            if abs(term) < 1e-15:  # Early stopping for convergence
+                break
+        return total
 
     return np.vectorize(exp_scalar)(x)
 
 
-"""
 def sinh(x, n_terms=50):
-    
+    """
     Compute the hyperbolic sine sinh(x) using Taylor series.
 
     The Taylor series is: sinh(x) = sum_{n=0}^infty x^(2n+1) / (2n+1)!.
@@ -67,31 +72,24 @@ def sinh(x, n_terms=50):
     1.1752011936438014
     >>> sinh(np.array([0, 1]))
     array([0.        , 1.17520119])
-    
+    """
 
-    def sinh_scalar(x):
-        return series_sum(lambda n: x ** (2 * n + 1), lambda n: 2 * n + 1, n_terms)
+    def sinh_scalar(val):
+        total = val  # Term for n=0: x^1 / 1!
+        term = val
+        for n in range(1, n_terms):
+            term *= (val**2) / (
+                (2 * n + 1) * (2 * n)
+            )  # term_n = term_{n-1} * x^2 / ((2n+1)(2n))
+            total += term
+            if abs(term) < 1e-15:  # Early stopping for convergence
+                break
+        return total
 
     return np.vectorize(sinh_scalar)(x)
-"""
 
 
-def sinh_scalar(x, n_terms=20):
-    total = x
-    term = x
-    for n in range(1, n_terms):
-        term *= (x**2) / ((2 * n + 1) * (2 * n))
-        total += term
-        if abs(term) < 1e-15:
-            break
-    return total
-
-
-def sinh(x):
-    return np.vectorize(lambda val: sinh_scalar(val, n_terms=20))(x)
-
-
-def cosh(x, n_terms=20):
+def cosh(x, n_terms=50):
     """
     Compute the hyperbolic cosine cosh(x) using Taylor series.
 
@@ -120,8 +118,17 @@ def cosh(x, n_terms=20):
     array([1.        , 1.54308063])
     """
 
-    def cosh_scalar(x):
-        return series_sum(lambda n: x ** (2 * n), lambda n: 2 * n, n_terms)
+    def cosh_scalar(val):
+        total = 1.0  # Term for n=0: x^0 / 0!
+        term = 1.0
+        for n in range(1, n_terms):
+            term *= (val**2) / (
+                (2 * n) * (2 * n - 1)
+            )  # term_n = term_{n-1} * x^2 / (2n(2n-1))
+            total += term
+            if abs(term) < 1e-15:  # Early stopping for convergence
+                break
+        return total
 
     return np.vectorize(cosh_scalar)(x)
 
@@ -151,6 +158,4 @@ def tanh(x, n_terms=50):
     >>> tanh(np.array([0, 1]))
     array([0.        , 0.76159416])
     """
-    s = sinh(x, n_terms)
-    c = cosh(x, n_terms)
-    return s / c
+    return sinh(x, n_terms) / cosh(x, n_terms)
