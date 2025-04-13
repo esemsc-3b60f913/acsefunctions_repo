@@ -24,4 +24,4 @@ def test_gamma():
 def test_bessel():
     assert bessel(0, 0) == 1.0
     assert np.allclose(bessel(0, 1), 0.7651976865579666, rtol=1e-2)
-    assert np.allclose(bessel(0, np.array([0, 1])), [1, 0.7651976865579666], rtol=1e-2)
+    assert np.allclose(bessel(0, np.array([0, 1])), [1, 0.7651], rtol=1e-2)

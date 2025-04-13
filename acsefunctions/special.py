@@ -1,7 +1,6 @@
 """Special functions: factorial, gamma, and Bessel."""
 
 import numpy as np
-from .utils import series_sum
 
 
 def factorial(n):
@@ -89,8 +88,8 @@ def gamma(z, T=100, M=1000):
         else:
             dt = T / M
             t = np.linspace(0, T, M + 1)
-            integrand = t ** (z - 1) * np.exp(-t)
-            return dt * (integrand[0] / 2 + integrand[-1] / 2 + np.sum(integrand[1:-1]))
+            ig = t ** (z - 1) * np.exp(-t)
+            return dt * (ig[0] / 2 + ig[-1] / 2 + np.sum(ig[1:-1]))
 
     return np.vectorize(gamma_scalar)(z)
 
@@ -98,8 +97,6 @@ def gamma(z, T=100, M=1000):
 def bessel(alpha, x, n_terms=20):
     """
     Compute the Bessel function J_alpha(x) using its series expansion.
-
-    Series: J_alpha(x) = sum_{m=0}^infty (-1)^m / (m! Γ(m + alpha + 1)) * (x/2)^(2m + alpha).
 
     Parameters
     ----------

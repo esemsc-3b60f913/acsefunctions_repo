@@ -6,7 +6,7 @@ def exp(x, n_terms=20):
         total = 1.0  # n=0: x^0 / 0! = 1
         term = 1.0
         for n in range(1, n_terms):
-            term *= val / n  # n-th term: x^n / n! = (x^(n-1) / (n-1)!) * x / n
+            term *= val / n
             total += term
             if abs(term) < 1e-15:
                 break
@@ -20,9 +20,7 @@ def sinh(x, n_terms=20):
         total = val  # n=0: x^1 / 1! = x
         term = val
         for n in range(1, n_terms):
-            term *= (val**2) / (
-                (2 * n + 1) * (2 * n)
-            )  # n-th term: x^(2n+1) / (2n+1)! = prev * x^2 / ((2n+1)(2n))
+            term *= (val**2) / ((2 * n + 1) * (2 * n))
             total += term
             if abs(term) < 1e-15:
                 break
@@ -36,9 +34,7 @@ def cosh(x, n_terms=20):
         total = 1.0  # n=0: x^0 / 0! = 1
         term = 1.0
         for n in range(1, n_terms):
-            term *= (val**2) / (
-                (2 * n) * (2 * n - 1)
-            )  # n-th term: x^(2n) / (2n)! = prev * x^2 / (2n * (2n-1))
+            term *= (val**2) / ((2 * n) * (2 * n - 1))
             total += term
             if abs(term) < 1e-15:
                 break

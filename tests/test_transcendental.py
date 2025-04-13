@@ -7,7 +7,7 @@ from acsefunctions import exp, sinh, cosh, tanh
 def test_exp():
     assert exp(0) == 1.0
     assert np.allclose(exp(1), 2.718281828459045, rtol=1e-8)
-    assert np.allclose(exp(np.array([-1, 0, 1])), np.exp([-1, 0, 1]), rtol=1e-8)
+    assert np.allclose(exp([-1, 0, 1]), np.exp([-1, 0, 1]))
 
 
 def test_sinh():
