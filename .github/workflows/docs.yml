@@ -20,6 +20,8 @@ jobs:
         run: |
           pip install -r docs/requirements.txt
           pip install -e .
+      - name: Install documentation dependencies
+        run: pip install -r docs/requirements.txt
       - name: Build docs
         run: sphinx-build -b pdf docs/ docs/_build
       - name: Commit PDF
