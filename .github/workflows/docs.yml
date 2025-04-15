@@ -17,19 +17,24 @@ jobs:
         with:
           python-version: '3.9'
       - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-extra
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install sphinx>=7.0.0  # Fallback in case requirements.txt is missing
+          pip install sphinx>=7.0.0
           if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
           pip install -e .
       - name: Build docs
-        run: sphinx-build -b pdf docs/ docs/_build
+        run: |
+          sphinx-build -b latex docs/ docs/_build/latex
+          cd docs/_build/latex
+          make
       - name: Commit PDF
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          git add docs/_build/*.pdf
+          git add docs/_build/latex/*.pdf
           git commit -m "Update documentation PDF" || echo "No changes"
           git push
