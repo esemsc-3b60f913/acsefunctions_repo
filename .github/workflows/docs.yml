@@ -11,17 +11,19 @@ jobs:
   docs:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: 3.9
+          python-version: '3.9'
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-latex-extra
       - name: Install dependencies
         run: |
-          pip install -r docs/requirements.txt
+          python -m pip install --upgrade pip
+          pip install sphinx>=7.0.0  # Fallback in case requirements.txt is missing
+          if [ -f docs/requirements.txt ]; then pip install -r docs/requirements.txt; fi
           pip install -e .
-      - name: Install documentation dependencies
-        run: pip install -r docs/requirements.txt
       - name: Build docs
         run: sphinx-build -b pdf docs/ docs/_build
       - name: Commit PDF
