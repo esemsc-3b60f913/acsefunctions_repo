@@ -10,7 +10,7 @@ def series_sum(power_func, fact_func, n_terms):
         next_term = term * power_func(n) / fact_func(n)
         if (
             abs(next_term) > 1e308 or abs(next_term) < 1e-15
-        ):  # Break on overflow risk or convergence
+        ):  # Break on overflow risk or convergences
             break
         term = next_term
         total += term
