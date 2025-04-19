@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.19)  19 APR 2025 13:04
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.19)  19 APR 2025 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,7 +174,15 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tex-gyre/tgheros.sty
 Package: tgheros 2009/09/27 v1.2 TeX Gyre Heros as default sans serif family
 )
-(/usr/local/texlive/2025/texmf-dist/tex/latex/fncychap/fncychap.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/textalpha.sty
+Package: textalpha 2023-09-12 2.5 macros for Greek letters in text
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/tuenc-greek.def
+File: tuenc-greek.def 2023-09-12 2.5 Greek LICRs for XeTeX and LuaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
+))) (/usr/local/texlive/2025/texmf-dist/tex/latex/fncychap/fncychap.sty
 Package: fncychap 2007/07/30 v1.34 LaTeX package (Revised chapters)
 \RW=\skip54
 \mylen=\skip55
@@ -649,7 +657,13 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
-)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/puenc-greek.def
+File: puenc-greek.def 2023-09-12 2.5 Greek LICRs for PDF strings
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/greek-fontenc/greek-fontenc.def
+File: greek-fontenc.def 2023-09-12 2.5 Common Greek font encoding definitions
+)))
 Package hyperref Info: Option `unicode' set `true' on input line 4040.
 Package hyperref Info: Option `colorlinks' set `true' on input line 4040.
 Package hyperref Info: Option `breaklinks' set `true' on input line 4040.
@@ -661,8 +675,7 @@ Package hyperref Info: Backreferencing OFF on input line 4177.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4424.
 \c@Hy@tempcnt=\count321
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -733,7 +746,7 @@ Package: sphinxmessages 2019/01/04 v2.0 Localized LaTeX macros (Sphinx team)
 
 
 Writing index file acsefunctions.idx
-LaTeX Font Info:    Trying to load font information for T1+qtm on input line 72
+LaTeX Font Info:    Trying to load font information for T1+qtm on input line 94
 .
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qtm.fd
 File: t1qtm.fd 2009/09/25 v1.2 font definition file for T1/qtm
@@ -748,26 +761,26 @@ File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
 (./acsefunctions.aux)
 \openout1 = `acsefunctions.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 72.
-LaTeX Font Info:    ... okay on input line 72.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 94.
+LaTeX Font Info:    ... okay on input line 94.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/fontawesome5/fontawesome5.sty
 (/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -830,26 +843,26 @@ fd)))
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 72.
+Package hyperref Info: Link coloring ON on input line 94.
 (./acsefunctions.out) (./acsefunctions.out)
 \@outlinefile=\write5
 \openout5 = `acsefunctions.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 80.
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 80
-.
+Package hyperref Info: Option `pageanchor' set `false' on input line 102.
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 10
+2.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102
+.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102
+.
 
 (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -874,63 +887,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 [2
 
-]
-LaTeX Font Info:    Trying to load font information for T1+txtt on input line 9
-7.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/txfonts/t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 97.
-LaTeX Font Info:    Trying to load font information for TS1+qtm on input line 1
-03.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/tex-gyre/ts1qtm.fd
-File: ts1qtm.fd 2009/09/25 v1.2 font definition file for TS1/qtm
-)
-LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
-(Font)              Font shape `T1/txtt/m/sl' tried instead on input line 105.
-
-Missing character: There is no ∫ ("222B) in font ec-qtmr!
-
-
-[1]
-
-[2]
-
-
-
-[3
-
-
-
-] (./acsefunctions.ind
-
-[4
-
-
-]
-
-
-
-[5
-
-
-]) (./acsefunctions.aux)
+] (./acsefunctions.ind) (./acsefunctions.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `acsefunctions.out' has not changed.
-(rerunfilecheck)             Checksum: 59EF8D11525A84B224C20931B93BE88C;214.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18297 strings out of 473832
- 308789 string characters out of 5729481
- 725004 words of memory out of 5000000
- 41010 multiletter control sequences out of 15000+600000
- 606873 words of font info for 79 fonts, out of 8000000 for 9000
+ 19249 strings out of 473832
+ 327451 string characters out of 5729481
+ 712863 words of memory out of 5000000
+ 41965 multiletter control sequences out of 15000+600000
+ 598183 words of font info for 66 fonts, out of 8000000 for 9000
  1349 hyphenation exceptions out of 8191
- 72i,11n,82p,1202b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,11n,82p,1202b,413s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on acsefunctions.xdv (9 pages, 15816 bytes).
+Output written on acsefunctions.xdv (4 pages, 2096 bytes).
