@@ -1,0 +1,31 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter A
+  \item \spxentry{acsefunctions.special}
+    \subitem \spxentry{module}, \hyperpage{1}
+  \item \spxentry{acsefunctions.transcendental}
+    \subitem \spxentry{module}, \hyperpage{1}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{bessel()}\spxextra{in module acsefunctions.special}, \hyperpage{1}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{factorial()}\spxextra{in module acsefunctions.special}, \hyperpage{1}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{gamma()}\spxextra{in module acsefunctions.special}, \hyperpage{1}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{module}
+    \subitem \spxentry{acsefunctions.special}, \hyperpage{1}
+    \subitem \spxentry{acsefunctions.transcendental}, \hyperpage{1}
+
+\end{sphinxtheindex}

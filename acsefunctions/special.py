@@ -45,9 +45,9 @@ def factorial(n):
 
 def gamma(z, T=100, M=1000):
     """
-    Compute the gamma function Γ(z) for z > 0 using numerical integration.
+    Compute the gamma function gamma(z) for z > 0 using numerical integration.
 
-    Uses trapezoidal rule on Γ(z) = ∫_0^∞ t^(z-1) e^(-t) dt.
+    Uses trapezoidal rule on gamma(z) = ∫_0^∞ t^(z-1) e^(-t) dt.
 
     Parameters
     ----------
@@ -61,7 +61,7 @@ def gamma(z, T=100, M=1000):
     Returns
     -------
     float or numpy.ndarray
-        Computed Γ(z).
+        Computed gamma(z).
 
     Raises
     ------

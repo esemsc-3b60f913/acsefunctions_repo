@@ -5,8 +5,9 @@ extensions = [
     "sphinx.ext.mathjax",  # For math rendering
 ]
 
-# LaTeX settings
+# docs/source/conf.py
 latex_elements = {
+    "latex_engine": "xelatex",
     "papersize": "a4paper",
     "pointsize": "10pt",
 }
