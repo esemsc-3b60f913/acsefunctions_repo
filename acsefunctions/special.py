@@ -45,9 +45,11 @@ def factorial(n):
 
 def gamma(z, T=100, M=1000):
     """
-    Compute the gamma function \\(\\Gamma(z)\\) for z > 0 using numerical integration.
+    Compute the gamma function \\(\\Gamma(z)\\) for z > 0 using numerical
+    integration.
 
-    Uses trapezoidal rule on \\(\\Gamma(z) = \\int_0^\\infty t^{z-1} e^{-t} \\, dt\\).
+    Uses trapezoidal rule on \\(\\Gamma(z) = \\int_0^\\infty t^{z-1}
+    e^{-t} \\, dt\\).
 
     Parameters
     ----------

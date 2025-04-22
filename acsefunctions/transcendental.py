@@ -3,7 +3,8 @@ import numpy as np
 
 def exp(x, n_terms=20):
     """
-    Compute the exponential function e^x using a Taylor series approximation.
+    Compute the exponential function e^x using a Taylor series
+    approximation.
 
     Parameters
     ----------
@@ -42,7 +43,8 @@ def exp(x, n_terms=20):
 
 def sinh(x, n_terms=20):
     """
-    Compute the hyperbolic sine function sinh(x) using a Taylor series approximation.
+    Compute the hyperbolic sine function sinh(x) using a Taylor series
+    approximation.
 
     Parameters
     ----------
@@ -81,7 +83,8 @@ def sinh(x, n_terms=20):
 
 def cosh(x, n_terms=20):
     """
-    Compute the hyperbolic cosine function cosh(x) using a Taylor series approximation.
+    Compute the hyperbolic cosine function cosh(x) using a Taylor series
+    approximation.
 
     Parameters
     ----------
@@ -148,6 +151,7 @@ def tanh(x, n_terms=20):
     >>> tanh(np.array([0, 1, 2]))
     array([0.        , 0.76159416, 0.96402758])
     """
+
     s = sinh(x, n_terms)
     c = cosh(x, n_terms)
     return s / c
