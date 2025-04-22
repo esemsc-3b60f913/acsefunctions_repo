@@ -47,7 +47,9 @@ def gamma(z, T=100, M=1000):
     """
     Compute the gamma function Γ(z) for z > 0 using numerical integration.
 
-    Uses the trapezoidal rule to approximate :math:`Γ(z) = ∫_0^∞ t^{z-1} e^{-t} \, dt`.
+    This function uses the trapezoidal rule to approximate the integral:
+
+        Γ(z) = ∫₀^∞ t^(z-1) * e^(-t) dt
 
     Parameters
     ----------
@@ -55,7 +57,7 @@ def gamma(z, T=100, M=1000):
         Input value(s), must be positive.
     T : float, optional
         Upper integration limit (default is 100).
-    N : int, optional
+    M : int, optional
         Number of integration points (default is 1000).
 
     Returns
