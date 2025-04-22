@@ -25,7 +25,7 @@ def exp(x, n_terms=20):
     >>> exp(1)
     2.718281828459045
     >>> exp(np.array([0, 1, 2]))
-    array([1.        , 2.71828183, 7.3890561 ])
+    array([1., 2.71828183, 7.3890561])
     """
 
     def exp_scalar(val):
@@ -65,7 +65,7 @@ def sinh(x, n_terms=20):
     >>> sinh(1)
     1.1752011936438014
     >>> sinh(np.array([0, 1, 2]))
-    array([0.        , 1.17520119, 3.62686041])
+    array([0., 1.17520119, 3.62686041])
     """
 
     def sinh_scalar(val):
@@ -105,7 +105,7 @@ def cosh(x, n_terms=20):
     >>> cosh(1)
     1.5430806348152437
     >>> cosh(np.array([0, 1, 2]))
-    array([1.        , 1.54308063, 3.76219569])
+    array([1., 1.54308063, 3.76219569])
     """
 
     def cosh_scalar(val):
@@ -130,7 +130,8 @@ def tanh(x, n_terms=20):
     x : float or numpy.ndarray
         Input value(s) for which to compute tanh(x).
     n_terms : int, optional
-        Number of terms to use in the Taylor series for sinh and cosh (default is 20).
+        Number of terms to use in the Taylor series for sinh and cosh
+        (default is 20).
 
     Returns
     -------
@@ -140,7 +141,8 @@ def tanh(x, n_terms=20):
     Raises
     ------
     ZeroDivisionError
-        If cosh(x) equals zero, which can occur in rare numerical edge cases.
+        If cosh(x) equals zero, which can occur in rare numerical edge
+        cases.
 
     Examples
     --------
@@ -149,7 +151,7 @@ def tanh(x, n_terms=20):
     >>> tanh(1)
     0.7615941559557649
     >>> tanh(np.array([0, 1, 2]))
-    array([0.        , 0.76159416, 0.96402758])
+    array([0., 0.76159416, 0.96402758])
     """
 
     s = sinh(x, n_terms)
