@@ -78,6 +78,7 @@
 % Set up styles of URL: it should be placed after hyperref.
 \urlstyle{same}
 
+\addto\captionsenglish{\renewcommand{\contentsname}{Contents:}}
 
 \usepackage{sphinxmessages}
 \setcounter{tocdepth}{1}
@@ -85,7 +86,7 @@
 
 
 \title{acsefunctions}
-\date{Apr 19, 2025}
+\date{Apr 22, 2025}
 \release{0.1}
 \author{Your Name}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -105,6 +106,9 @@
 \pagestyle{normal}
 \phantomsection\label{\detokenize{index::doc}}
 
+
+\sphinxAtStartPar
+The \sphinxtitleref{acsefunctions} package provides numerical implementations of mathematical functions, including transcendental functions (e.g., exp, sinh, cosh, tanh) and special functions (e.g., factorial, gamma, Bessel). These functions support both scalar and NumPy array inputs for vectorized computation.
 
 
 

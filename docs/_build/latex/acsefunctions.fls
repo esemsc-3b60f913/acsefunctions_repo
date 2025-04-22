@@ -318,6 +318,7 @@ INPUT ./acsefunctions.toc
 INPUT ./acsefunctions.toc
 INPUT acsefunctions.toc
 OUTPUT acsefunctions.toc
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/tex-gyre/ec-qtmri.tfm
 INPUT ./acsefunctions.ind
 INPUT ./acsefunctions.ind
 INPUT acsefunctions.ind
